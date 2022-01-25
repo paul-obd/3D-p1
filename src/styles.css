@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    height: 100vh;
+    font-family: 'Poppins';
+    background-color: rgb(24, 24, 24);
+}
+
+/* body{
+    overflow-x: hidden;
+} */
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
