@@ -3,6 +3,7 @@
 {
     margin: 0;
     padding: 0;
+
 }
 
 html,
@@ -11,13 +12,19 @@ body
     height: 100vh;
     font-family: 'Poppins';
     background-color: rgb(24, 24, 24);
+    margin: 0; 
 }
 
 /* body{
     overflow-x: hidden;
 } */
 
-body{
+/* body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+} */
+
+html{
     overflow-x: hidden;
     overflow-y: hidden;
 }

@@ -9,6 +9,10 @@
     mix-blend-mode: exclusion;
 }
 
+canvas{
+    width: 100vw; height: 100vw; display: block;
+}
+
 .container{
     height: 100vh;
     display: grid;

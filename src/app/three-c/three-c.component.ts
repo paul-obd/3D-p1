@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { OrbitControls } from "three-orbit-controls";
 import * as dat from 'dat.gui'
 
 
@@ -31,13 +32,18 @@ export class ThreeCComponent implements OnInit {
 
     //loading
     const textureLoader =  new THREE.TextureLoader();
-    const normalTexture = textureLoader.load('../../assets/images/NormalMap.png')
+ 
+  
+    const normalTexture = textureLoader.load('assets/images/NormalMap.png')
+    normalTexture.minFilter = THREE.LinearFilter;
+
 
     // Canvas
     const canvas = document.querySelector('canvas.webgl')
 
     // Scene
     const scene = new THREE.Scene()
+  
 
     // Objects
     const geometry = new THREE.SphereBufferGeometry(.5, 64, 64);
@@ -159,14 +165,18 @@ export class ThreeCComponent implements OnInit {
      */
     const renderer = new THREE.WebGLRenderer({
       canvas: canvas,
-      alpha: true
+      alpha: true,
+
     })
+    // renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
     /**
      * Animate
      */
+   
+    
 
     document.addEventListener('mousemove', onDocumentMouseMove)
 
